@@ -1,0 +1,4 @@
+#!/bin/bash
+
+pkill -f antimicrox
+antimicrox --hidden --profile ~/.config/antimicrox/profiles/controller1.gamecontroller.amgp

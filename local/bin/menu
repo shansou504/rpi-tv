@@ -1,0 +1,15 @@
+#!/bin/bash
+
+pkill -f antimicrox
+antimicrox --hidden --profile ~/controller1.gamecontroller.amgp &
+
+option=$(whiptail --title "Menu" --menu "Programs" $(tput lines) $(tput cols) 6 "1" "RetroArch" "2" "Kodi" "3" "Raspi-Config" "4" "Logout" "5" "Reboot" "6" "Shutdown" 3>&1 1>&2 2>&3)
+
+case $option in
+	"1") startretroarch;;
+	"2") startkodi;;
+	"3") startraspiconfig;;
+	"4") openbox --exit;;
+	"5") systemctl reboot;;
+	"6") systemctl poweroff;;
+esac
