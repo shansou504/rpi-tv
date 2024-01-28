@@ -3,7 +3,7 @@
 sudo raspi-config
 sudo apt update
 sudo apt upgrade -y
-sudo apt install -y xinit openbox obsession tint2 vim pulseaudio pavucontrol pasystray network-manager-gnome blueman lxpolkit lxterminal lxappearance gnome-themes-extra papirus-icon-theme feh rpd-plym-splash git suckless-tools onboard antimicro retroarch libretro-mgba libretro-gambatte kodi kodi-inputstream-adaptive kodi-peripheral-joystick cmake libjpeg-dev
+sudo apt install -y xinit openbox obsession tint2 vim pulseaudio pavucontrol pasystray network-manager-gnome blueman lxpolkit lxterminal lxappearance gnome-themes-extra papirus-icon-theme feh rpd-plym-splash git suckless-tools onboard antimicro retroarch libretro-mgba libretro-gambatte kodi kodi-inputstream-adaptive kodi-peripheral-joystick cmake libjpeg-dev unattended-upgrades
 cd
 git clone https://github.com/shansou504/raspberry-pi-tv
 cd raspberry-pi-tv/
