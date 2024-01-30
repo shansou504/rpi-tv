@@ -1,5 +1,0 @@
-[Service]
-ExecStart=mjpg_streamer -o "output_http.so -w ./www -p 8000" -i "input_uvc.so"
-
-[Install]
-WantedBy=multi-user.target
