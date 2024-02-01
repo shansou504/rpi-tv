@@ -1,0 +1,7 @@
+[Service]
+ExecStart=stream
+Restart=on-failure
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target

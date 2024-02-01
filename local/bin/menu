@@ -3,7 +3,7 @@
 pkill -f antimicrox
 antimicrox --hidden --profile ~/controller1.gamecontroller.amgp &
 
-option=$(whiptail --title "Menu" --menu "Programs" $(tput lines) $(tput cols) 7 "1" "RetroArch" "2" "Kodi" "3" "Raspi-Config" "4" "System Update" "5" "Logout" "6" "Reboot" "7" "Shutdown" 3>&1 1>&2 2>&3)
+option=$(whiptail --title "Menu" --menu "Programs" $(tput lines) $(tput cols) 7 "1" "RetroArch" "2" "Kodi" "3" "Raspi-Config" "4" "Update" "5" "Restart Openbox" "6" "Reboot" "7" "Shutdown" 3>&1 1>&2 2>&3)
 
 case $option in
 	"1") startretroarch;;

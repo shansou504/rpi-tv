@@ -30,12 +30,27 @@ After the reboot, configure the following:
 - pasystray (set default sink to preferred output)
 - onboard (set at bottom of screen, start hidden, blackboard theme)
 - retroarch (put roms in ~/roms/)
-- setup motion
+- setup motion or stream server
 
 ```
 chmod 644 ~/.config/antimicrox/profiles/controller1.gamecontroller.amgp
 ```
+### If using the stream server
+
+Use ```arecord -l``` to determine the desired soundcard name and update ```~/.local/bin/stream```
+
+Give www-data sudo permissions with no password.
+
+```sudo visudo /etc/sudoers.d/030_www-data```
+
+Copy into file, save, and exit.
+
+```www-data ALL=(ALL) NOPASSWD: ALL```
 
 ## Usage
 
 Openbox should autostart, your controller should automatically connect, the menu should load and you should be able to make selections with the gamepad.
+
+### If using the stream server
+
+Point your browser to http://<ip-address-of-pi> to turn on or off the stream. Use ffplay or vlc pointed to tcp://<ip-address-of-pi>:1234 to view the stream. There is a 5-10 second delay which is much less than the 30 or so seconds if using nginx-rtmp and hls.
