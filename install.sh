@@ -14,6 +14,9 @@ sudo cp etc/nginx/sites-available/stream /etc/nginx/sites-available/
 sudo chown root:root /etc/sites-available/stream
 sudo ln -s /etc/nginx/sites-available/stream /etc/nginx/sites-enabled/stream
 sudo cp lib/systemd/system/stream.service /lib/systemd/system/
+sudo cp usr/local/bin/stream /usr/local/bin/
+sudo chown root:root /usr/local/bin/stream
+sudo chmod 755 /usr/local/bin/stream
 sudo chown root:root /lib/systemd/system/stream.service
 sudo usermod -aG audio,video,sudo www-data
 echo "Copying autostart into ~/.config/openbox/"
